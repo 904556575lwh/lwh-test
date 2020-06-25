@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/aoyun.js"></script>
+<style type="text/css">
+	*{margin: 0px;padding: 0px;}
+	#clock{
+	width: 100vw; height: auto;text-align: center;
+	font-size: 50px;
+	}
+	header{width: 100vw; text-align: center;}
+</style>
+</head>
+	<body>
+		<header>
+		
+		</header>
+		<div id="clock"><h2></h2></div>
+		<script type="text/javascript">
+		function flash() {
+		var nowTime=new Date(); 		
+		var aoyunTime=new Date(2020, 6, 24, 20, 00, 00);
+		var haomiao=aoyunTime.getTime()-nowTime.getTime(); 
+		var day0=haomiao/86400000; 
+		var hour0=(haomiao%86400000)/3600000;
+		var minute0=(haomiao%86400000%3600000)/60000; 
+		var second0=(haomiao%86400000%3600000%60000)/1000;
+		var str="<p>2020東京五輪 まで あと</p>"+Math.floor(day0)+"<span>日</span>"+Math.floor(hour0)+"<span>時間</span>"+Math.floor(minute0)+"<span>分</span>"+Math.floor(second0)+"<span>秒</span>";
+		document.getElementById("clock").innerHTML=(str);
+		}
+		setInterval("flash()",1000);
+		</script>
+	</body>
+</html>

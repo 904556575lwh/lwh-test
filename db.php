@@ -42,6 +42,7 @@ Last Access Time<br><br>
         <?=escape1($a)?><br>
 <?php endforeach; ?>
 <?php echo 'Japan time : ' . date("Y/m/d H:i:s"); ?>
+<?php echo '<p>Add comment by LiWenhua</p>'; ?>
 </body>
 </html>
 
